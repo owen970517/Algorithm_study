@@ -8,6 +8,8 @@ if(na%2==1):
     result+=change//2
 elif(na==0):
     result += mok
+elif change <0 and change >= 100000:
+    result = -1
 else :
     result += mok
     change -= 5*mok
