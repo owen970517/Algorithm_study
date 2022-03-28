@@ -6,18 +6,9 @@ def dfs(graph, start_node, visit=list()):
        if node not in visit:
            dfs(graph, node, visit)
 graph = {
-    'A': ['B'],
-    'B': ['A', 'C', 'H'],
-    'C': ['B', 'D'],
-    'D': ['C', 'E', 'G'],
-    'E': ['D', 'F'],
-    'F': ['E'],
-    'G': ['D'],
-    'H': ['B', 'I', 'J', 'M'],
-    'I': ['H'],
-    'J': ['H', 'K'],
-    'K': ['J', 'L'],
-    'L': ['K'],
-    'M': ['H']
+    '1' : ['2','4'],
+    '2' : ['3','4'],
+    '3' : ['4']
 }
-dfs(graph, 'A')
+  
+dfs(graph, '1')
