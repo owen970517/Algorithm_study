@@ -1,5 +1,4 @@
 from collections import deque
-
 # BFS
 def bfs(graph, start, visited):
   # 큐 구현을 위해 deque라이브러리 사용
@@ -25,13 +24,14 @@ def bfs(graph, start, visited):
 graph=[
   [],
   [1,2],
-  [1,3],
-  [1,4],
-  [2,4],
-  [3,4]
+  [2,3],
+  [1,5],
+  [5,2],
+  [5,6],
+  [4,7]
 ]
 
 # 방문 정보
-visited = [False]*(5+1) #(총 노드의 갯수)+인덱스 0
+visited = [False]*(6+1) #(총 노드의 갯수)+인덱스 0
 # bfs호출
 bfs(graph, 1, visited)

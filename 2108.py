@@ -1,42 +1,39 @@
+import sys
+
 def arithmetic(li):
     sum=0
     for i in li:
         sum+=i
-    print(round((sum/len(li))))
+    avg=round((sum/len(li)))
+    return avg
 def center(li):
-    li.sort()
-    print(li[round(len(li)/2)])
+    center= li[len(li)//2]
+    return center
 def mode(li):
     dic={}
-    a=[]
-    result=[]
     for i in li:
         if i in dic:
             dic[i]+=1
         else:
             dic[i]=1
-    for i in dic:
-        a.append([i,dic[i]])
-    for i in range(len(a)):
-        if len(a)==1:
-            result.append(a[i][0])
-        elif a[i][1] == max(a[1]):
-            result.append(a[i][0])
-    if len(result) != 1:
-        print(result[1])
+    modes = [ k for k, v in dic.items() if v == max(dic.values())]
+    if len(modes) > 1:
+        return modes[1]
     else:
-        print(result[0])
+        return modes[0]
 
 def scope(li) :
     a=max(li)
     b=min(li)
-    print(a-b)         
-n=int(input())
+    scope=a-b
+    return scope        
+n=int(sys.stdin.readline())
 li=[]
 for _ in range(n):
-    s=int(input())
+    s=int(sys.stdin.readline())
     li.append(s)
-arithmetic(li)
-center(li)
-mode(li)
-scope(li)
+li.sort()
+print(arithmetic(li))
+print(center(li))
+print(mode(li))
+print(scope(li))
