@@ -12,4 +12,5 @@ for _ in range(t):
         print(start[0],start[1])
         if start[0]>=1 and start[0] <=8 and start[1] >=1 and start[1]<=8:
             count +=1
+print(count)
 
