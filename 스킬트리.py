@@ -1,15 +1,16 @@
 def solution(skill, skill_trees):
     answer = 0
-    result=0
-    li = list(skill)
     for i in skill_trees:
+        li=[]
         for j in i:
-            for num in range(len(j)):
-                if j[num] in li:
-                    word = j[num] 
-                
-    answer=result
-    return answer,word
+            if j in skill:
+                li.append(j)
+        for i in range(len(li)):
+            if li[i] != skill[i]:
+                break
+        else:
+            answer+=1
+    return answer
 
 skill = "CBD"
 skill_trees=[["BACDE", "CBADF", "AECB", "BDA"]]
