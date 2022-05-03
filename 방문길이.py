@@ -18,8 +18,6 @@ for plan in plans:
             if (x,y) in s and (nx,ny) in e:
                 x,y=nx,ny
                 continue
-            if (x,y) == (nx,ny):
-                continue
             count +=1
             s.append((x,y))
             e.append((nx,ny))
